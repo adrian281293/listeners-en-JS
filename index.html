@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+
+<input type="text" id="txtizq">
+<input type="text" id="txtder">
+<button id="btnMover">Mover Cajas</button>
+<button id="btnEliminar">Eliminar Contenido</button>
+
+<script>
+function moverTexts (e)
+{
+	var elemDer = document.getElementById("txtder").value;
+	document.getElementById("txtder").value=document.getElementById("txtizq").value;
+	document.getElementById("txtizq").value=elemDer;
+		
+}
+
+function eliminarTexts (e)
+{
+	document.getElementById("txtizq").value="";
+	document.getElementById("txtder").value="";
+	
+	
+	}
+
+
+btnMover.addEventListener("click", moverTexts);
+btnEliminar.addEventListener("click", eliminarTexts);
+</script>
+
+</body>
+</html>
